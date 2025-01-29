@@ -33,4 +33,4 @@ This is the project from "Object-Oriented Programming" at CCU
       - Record the SDN ctrl packets that have been acked
       - If all the SDN ctrl packets in the last round are acked, then SDN controller sends the SDN ctrl packets in the next round
 ## Note
-- Providing example input and output for reference.
+- Providing sample inputs and outputs for reference.
