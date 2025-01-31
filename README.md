@@ -32,9 +32,13 @@ This is the project from "Object-Oriented Programming" at CCU
     - After the controller receives the ack
       - Record the SDN ctrl packets that have been acked
       - If all the SDN ctrl packets in the last round are acked, then SDN controller sends the SDN ctrl packets in the next round
-## Update route algorithm
-- We first install the route table using dijkstra.
+## Network updating algorithm
 - The main algorithm is in function `DetermineRout`. You should trace code from function `SDN_controller::recv_handler`.
+- According to w_order, we determine which weight should be install (old or new).
+- Instsall the route with old weight.
+- At update time, using `first_round_send` let the leaf in old graph send ctrl packet firstly.
+- `SDN_controller::recv_handler` receive the ack from `first_round_send` then determine the next updating node using `DetermineRout`.
+- Parents will update first, so it won't generate loop during data packets transmition. (According to the traffic flow, parents are the node who receive the packet firstly)
 
 ## Note
 - Providing sample inputs and outputs for reference.
