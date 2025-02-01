@@ -1,4 +1,4 @@
-# SDN-Routing-Path-and-Updating-Network
+# SDN-Routing-Path-and-Network-Updating
 This is the project from "Object-Oriented Programming" at CCU
 ## Input
 - Number of nodes, destinations and links
